@@ -1,1 +1,55 @@
+:root {
+  /* ==========================================
+     PALETA DE COLORES
+     ========================================== */
+  --color-bg: #fefaf0;            /* Fondo principal (blanco cálido) */
+  --color-surface: #ffffff;       /* Superficie de tarjetas */
+  --color-dark: #542916;          /* Texto principal / Marrón oscuro */
+  --color-dark-soft: #a13a1e;     /* Texto secundario / Terracota */
+  --color-muted: #b79b58;         /* Texto de apoyo / Ocre suave */
+  --color-accent: #f1c166;        /* Dorado fotográfico / Acento principal */
+  --color-accent-light: #88b8cf;  /* Acento claro / Azul pastel */
+  --color-border: #e8e4da;        /* Bordes suaves */
+  --color-dark-bg: #542916;       /* Fondo secciones oscuras */
+  --color-dark-surface: #401e0f;  /* Superficie en oscuro */
 
+  /* ==========================================
+     BORDES REDONDEADOS (BORDER RADIUS)
+     ========================================== */
+  --radius-sm: 4px;    /* Bordes rectos */
+  --radius-md: 8px;    /* Bordes soft */
+  --radius-lg: 16px;   /* Bordes pills */
+  --radius-full: 50%;  /* Bordes full (Círculos perfectos) */
+
+  /* ==========================================
+     SOMBRAS (BOX SHADOWS)
+     ========================================== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* ==========================================
+     TIPOGRAFÍA Y ESCALA DE FUENTES
+     ========================================== */
+  /* Familias tipográficas (Reemplaza con tus fuentes reales si usas Google Fonts) */
+  --font-display: 'Georgia', serif; 
+  --font-body: 'Helvetica Neue', Arial, sans-serif;
+
+  /* Tamaños de fuente basados en la escala de la imagen */
+  --font-size-xs: 0.75rem;    /* 12px - Textos muy pequeños / badges */
+  --font-size-sm: 0.875rem;   /* 14px - Texto secundario / precios antiguos */
+  --font-size-base: 1rem;     /* 16px - Texto del cuerpo / párrafos principales */
+  --font-size-md: 1.125rem;   /* 18px - Subtítulos pequeños / títulos de tarjetas */
+  --font-size-lg: 1.25rem;    /* 20px - Títulos de tarjetas grandes */
+  --font-size-xl: 1.5rem;     /* 24px - Títulos de secciones secundarias */
+  --font-size-2xl: 1.875rem;  /* 30px - Títulos de secciones principales */
+  --font-size-3xl: 2.25rem;   /* 36px - Títulos grandes */
+  --font-size-4xl: 3rem;      /* 48px - Título Hero (Principal) */
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+}
