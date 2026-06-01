@@ -1,273 +1,317 @@
 <!DOCTYPE html>
 <html lang="es">
-  
-  <head></head>
-  
-  <header>
-    <!-- barra de navegación -->
-      <nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Coffeename - Experiencia de Especialidad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <div>
-          <h1></h1>
-        </div>  
-        <div>
-          <ul>
-            
-            <il><a href="#"></a></il>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            
-          </ul>
-        </div>
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__logo">
+        <h1 class="nav__title">CaféAgora</h1>
+      </div>  
+      
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link nav__link--active">Inicio</a></li>
+          <li class="nav__item"><a href="#categorias" class="nav__link">Menú</a></li>
+          <li class="nav__item"><a href="#productos" class="nav__link">Granos</a></li>
+          <li class="nav__item"><a href="#ofertas" class="nav__link">Promociones</a></li>
+          <li class="nav__item"><a href="#contacto" class="nav__link">Ubicación</a></li>
+        </ul>
+      </div>
 
-        <div>
-           <ul>
-            
-            <il><a href="#"></a></il>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            
-          </ul>
-        </div>
-      </nav>
-    
+      <div class="nav__actions">
+        <ul class="nav__icon-list">
+          <li class="nav__icon-item"><a href="#" class="nav__icon-link" aria-label="Buscar"><i class="icon-search"></i></a></li>
+          <li class="nav__icon-item"><a href="#" class="nav__icon-link" aria-label="Carrito"><i class="icon-cart"></i></a></li>
+          <li class="nav__icon-item"><a href="#" class="nav__icon-link" aria-label="Perfil de usuario"><i class="icon-user"></i></a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
-  <main>
-    <!-- contenido -->
-    <section>
-      <!-- presentacion texto-imagen -->
-      <div>
-        
-        <h2></h2>
-        <p></p>
-        <button></button>
-        
+  <main class="main-content">
+    
+    <section class="hero container">
+      <div class="hero__content">
+        <h2 class="hero__title">Haz de tu día una experiencia más cálida</h2>
+        <p class="hero__description">Descubre café de especialidad con notas artesanales, tostado a la perfección para acompañar cada uno de tus momentos.</p>
+        <button class="btn btn--primary">Ver el Menú</button>
       </div>
       
-      <div>
-        
-        <img>
-        
+      <div class="hero__image-wrapper">
+        <img src="img/hero-coffee.jpg" alt="Taza de café de especialidad humeante con granos tostados alrededor" class="hero__img">
       </div>
-      
     </section>
     
-    <section>
-      <!-- categorias destacas -->
-      <!-- servicios -->
-      <div>
-        <h2></h2>
+    <section id="categorias" class="categories container">
+      <div class="categories__header">
+        <h2 class="section-title">Categorías destacadas</h2>
       </div>
       
-      <section>
-        <!-- tarjetas de servicios -->
-        <div>
-          <a></a>
-          <h3></h3>
+      <div class="categories__grid">
+        <div class="category-card">
+          <a href="#" class="category-card__link">
+            <span class="category-card__icon">☕</span>
+            <h3 class="category-card__name">Filtrados</h3>
+          </a>
         </div>
-        <div>
-          <a></a>
-          <h3></h3>
+        <div class="category-card">
+          <a href="#" class="category-card__link">
+            <span class="category-card__icon">🥛</span>
+            <h3 class="category-card__name">Con Leche</h3>
+          </a>
         </div>
-        <div>
-          <a></a>
-          <h3></h3>
+        <div class="category-card">
+          <a href="#" class="category-card__link">
+            <span class="category-card__icon">🧊</span>
+            <h3 class="category-card__name">Bebidas Frías</h3>
+          </a>
         </div>
-        <div>
-          <a></a>
-          <h3></h3>
+        <div class="category-card">
+          <a href="#" class="category-card__link">
+            <span class="category-card__icon">🥐</span>
+            <h3 class="category-card__name">Repostería</h3>
+          </a>
         </div>
-        <div>
-          <a></a>
-          <h3></h3>
+        <div class="category-card">
+          <a href="#" class="category-card__link">
+            <span class="category-card__icon">🫘</span>
+            <h3 class="category-card__name">Café en Grano</h3>
+          </a>
         </div>
-        
-      </section>
+      </div>
 
-      <aside>
-
-        n<!-- oticias y ofertas ara el cliente, clientes estrellas -->
-        
-        <div>
-          <img>
-          <p></p>
-          <p></p>
-          <p></p>
+      <aside class="banners-promo">
+        <div class="banner-card banner-card--light">
+          <div class="banner-card__info">
+            <span class="banner-card__badge">Tostaduría Local</span>
+            <p class="banner-card__text">Granos frescos y orgánicos</p>
+            <button class="btn btn--secondary-dark">Comprar Ahora</button>
+          </div>
+          <img src="img/banner-granos.jpg" alt="Granos de café" class="banner-card__img">
         </div>
         
-        <div>
-          <img>
-          <p></p>
-          <p></p>
-          <p></p>
+        <div class="banner-card banner-card--dark">
+          <div class="banner-card__info">
+            <span class="banner-card__badge banner-card__badge--accent">Club de café</span>
+            <p class="banner-card__text">Prueba variedades de temporada</p>
+            <button class="btn btn--accent">Unirse al Club</button>
+          </div>
+          <img src="img/banner-club.jpg" alt="Suscripción mensual de café" class="banner-card__img">
         </div>
-        
       </aside>
-      
     </section>
     
-    <section>
-
-      <div>
-        <h2></h2>
-        <p></p>
+    <section id="productos" class="products container">
+      <div class="products__header">
+        <h2 class="section-title">Productos destacados</h2>
+        <p class="products__subtitle">Nuestras especialidades recomendadas por el barista</p>
       </div>
 
-      <setion>
-        <!-- productos -->
-        <div>
-          <img>
-          <h2></h2>
-          <p></p>
-          <p></p>
-          <button></button>
-        </div>
+      <div class="products__grid">
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img/espresso.jpg" alt="Café Espresso doble" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <span class="product-card__tag">Cafés</span>
+            <h3 class="product-card__title">Espresso Doble</h3>
+            <p class="product-card__price">$2.50</p>
+            <button class="btn btn--cart" aria-label="Agregar Espresso Doble al carrito">Agregar al carrito</button>
+          </div>
+        </article>
 
-        <div>
-          <img>
-          <h2></h2>
-          <p></p>
-          <p></p>
-          <button></button>
-        </div>
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img/cappuccino.jpg" alt="Café Cappuccino" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <span class="product-card__tag">Con Leche</span>
+            <h3 class="product-card__title">Cappuccino Italiano</h3>
+            <p class="product-card__price">$3.50</p>
+            <button class="btn btn--cart" aria-label="Agregar Cappuccino al carrito">Agregar al carrito</button>
+          </div>
+        </article>
 
-        <div>
-          <img>
-          <h2></h2>
-          <p></p>
-          <p></p>
-          <button></button>
-        </div>
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img/v60.jpg" alt="Método de extracción V60" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <span class="product-card__tag">Filtrados</span>
+            <h3 class="product-card__title">Método V60</h3>
+            <p class="product-card__price">$4.00</p>
+            <button class="btn btn--cart" aria-label="Agregar V60 al carrito">Agregar al carrito</button>
+          </div>
+        </article>
 
-        <div>
-          <img>
-          <h2></h2>
-          <p></p>
-          <p></p>
-          <button></button>
-        </div>
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img/croissant.jpg" alt="Croissant de mantequilla" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <span class="product-card__tag">Repostería</span>
+            <h3 class="product-card__title">Croissant Artesanal</h3>
+            <p class="product-card__price">$2.25</p>
+            <button class="btn btn--cart" aria-label="Agregar Croissant al carrito">Agregar al carrito</button>
+          </div>
+        </article>
 
-        <div>
-          <img>
-          <h2></h2>
-          <p></p>
-          <p></p>
-          <button></button>
         </div>
-
-        <div>
-          <img>
-          <h2></h2>
-          <p></p>
-          <p></p>
-          <button></button>
-        </div>
-
-        <div>
-          <img>
-          <h2></h2>
-          <p></p>
-          <p></p>
-          <button></button>
-        </div>
-
-        <div>
-          <img>
-          <h2></h2>
-          <p></p>
-          <p></p>
-          <button></button>
-        </div>
-        
-      </setion>
-      
     </section>
     
-    <section>
-      <!-- oferta del mes -->
-      <!-- promoción activa -->
-      <aside>
-        
-        <img>
-        <div>
-          <h2></h2>
-          <p></p>
-          <button></button>
+    <section id="ofertas" class="deals container">
+      
+      <aside class="deal-hero">
+        <div class="deal-hero__content">
+          <h2 class="deal-hero__title">Oferta de temporada</h2>
+          <p class="deal-hero__description">Disfruta nuestro Cold Brew gigante con un 20% de descuento durante toda esta semana de calor.</p>
+          <button class="btn btn--dark">Ver Oferta</button>
         </div>
-        
+        <div class="deal-hero__image-wrapper">
+          <img src="img/cold-brew-deal.jpg" alt="Vaso de Cold Brew con hielos al sol" class="deal-hero__img">
+        </div>
       </aside>
 
-      <section>
+      <div class="daily-deals">
+        <div class="daily-deals__header">
+          <h2 class="section-title">Ofertas del día</h2>
+        </div>
         
-        <!-- productos en oferta o precios especiales -->
-        <di>
-          <h2></h2>
-        </di>
-        <section>
-          <div>
-            <h3></h3>
-            <img>
-            <p></p>
-            <h2></h2>
-            <p></p>
-          </div>
+        <div class="daily-deals__grid">
+          <article class="deal-mini-card">
+            <span class="deal-mini-card__badge">-15%</span>
+            <div class="deal-mini-card__img-container">
+              <img src="img/latte-pack.jpg" alt="Combo Latte" class="deal-mini-card__img">
+            </div>
+            <div class="deal-mini-card__info">
+              <h3 class="deal-mini-card__title">Latte + Muffins Orgánicos</h3>
+              <p class="deal-mini-card__price"><span class="deal-mini-card__old-price">$5.50</span> $4.65</p>
+            </div>
+          </article>
 
-          <div>
-            <h3></h3>
-            <img>
-            <p></p>
-            <h2></h2>
-            <p></p>
-          </div>
+          <article class="deal-mini-card">
+            <span class="deal-mini-card__badge">-10%</span>
+            <div class="deal-mini-card__img-container">
+              <img src="img/bolsa-grano.jpg" alt="Bolsa de café en grano" class="deal-mini-card__img">
+            </div>
+            <div class="deal-mini-card__info">
+              <h3 class="deal-mini-card__title">Café Pacamara 250g</h3>
+              <p class="deal-mini-card__price"><span class="deal-mini-card__old-price">$12.00</span> $10.80</p>
+            </div>
+          </article>
 
-          <div>
-            <h3></h3>
-            <img>
-            <p></p>
-            <h2></h2>
-            <p></p>
-          </div>
+          <article class="deal-mini-card">
+            <span class="deal-mini-card__badge">-20%</span>
+            <div class="deal-mini-card__img-container">
+              <img src="img/cheesecake.jpg" alt="Rebanada de Cheesecake" class="deal-mini-card__img">
+            </div>
+            <div class="deal-mini-card__info">
+              <h3 class="deal-mini-card__title">Cheesecake de Maracuyá</h3>
+              <p class="deal-mini-card__price"><span class="deal-mini-card__old-price">$3.50</span> $2.80</p>
+            </div>
+          </article>
 
-          <div>
-            <h3></h3>
-            <img>
-            <p></p>
-            <h2></h2>
-            <p></p>
-          </div>
-
-          <div>
-            <h3></h3>
-            <img>
-            <p></p>
-            <h2></h2>
-            <p></p>
-          </div>
-
-          <div>
-            <h3></h3>
-            <img>
-            <p></p>
-            <h2></h2>
-            <p></p>
-          </div>
-          
-        </section>
-        
-      </section>
-      
+          <article class="deal-mini-card">
+            <span class="deal-mini-card__badge">Gratis</span>
+            <div class="deal-mini-card__img-container">
+              <img src="img/panini.jpg" alt="Panini de la casa" class="deal-mini-card__img">
+            </div>
+            <div class="deal-mini-card__info">
+              <h3 class="deal-mini-card__title">Panini de Pollo + Americano</h3>
+              <p class="deal-mini-card__price"><span class="deal-mini-card__old-price">$6.50</span> $5.00</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
     
-    <section>
-      <!-- formulario y ubicación -->
+    <section id="contacto" class="newsletter-location container">
+      <div class="features-bar">
+        <div class="feature-item">
+          <span class="feature-item__icon">🛵</span>
+          <p class="feature-item__text"><strong>Envío gratis</strong> En pedidos mayores a $15</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-item__icon">🔒</span>
+          <p class="feature-item__text"><strong>Pago Seguro</strong> Transacciones 100% cifradas</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-item__icon">🌱</span>
+          <p class="feature-item__text"><strong>Granos Orgánicos</strong> Certificación de origen sostenible</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-item__icon">⚡</span>
+          <p class="feature-item__text"><strong>Entrega rápida</strong> Café caliente en minutos</p>
+        </div>
+      </div>
+
+      <div class="newsletter">
+        <h3 class="newsletter__title">Recibe ofertas exclusivas</h3>
+        <p class="newsletter__description">Suscríbete para recibir alertas de nuevos lotes de café de especialidad y promociones de fin de semana.</p>
+        <form class="newsletter__form">
+          <input type="email" placeholder="Tu correo electrónico" class="newsletter__input" required>
+          <button type="submit" class="btn btn--submit">Suscribirme</button>
+        </form>
+      </div>
     </section>
     
   </main>
 
-  <footer>
-    <!-- pie de pagina -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__brand">
+        <h2 class="footer__logo">CaféAgora</h2>
+        <p class="footer__about">Llevando el mejor café de especialidad desde los cafetales directamente hasta tu taza favorita.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link"><i class="icon-facebook"></i></a>
+          <a href="#" class="footer__social-link"><i class="icon-instagram"></i></a>
+          <a href="#" class="footer__social-link"><i class="icon-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__links-group">
+        <h4 class="footer__links-title">Enlaces</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Sobre nosotros</a></li>
+          <li><li><a href="#" class="footer__link">Nuestros baristas</a></li>
+          <li><a href="#" class="footer__link">Blog del café</a></li>
+          <li><a href="#" class="footer__link">Sostenibilidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links-group">
+        <h4 class="footer__links-title">Legal</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Envíos y devoluciones</a></li>
+          <li><a href="#" class="footer__link">Preguntas Frecuentes</a></li>
+          <li><a href="#" class="footer__link">Términos y condiciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links-group">
+        <h4 class="footer__links-title">Contacto</h4>
+        <ul class="footer__list footer__list--contact">
+          <li>📧 info@cafeagora.com</li>
+          <li>📞 +503 2200-0000</li>
+          <li>📍 Calle del Café #123, San Salvador</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom container">
+      <p class="footer__copy">&copy; 2026 CaféAgora. Todos los derechos reservados.</p>
+      <div class="footer__legal-links">
+        <a href="#">Privacidad</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
   </footer>
-</html>  
+
+</body>
+</html> 
