@@ -55,10 +55,10 @@ body {
 }
 
 .main-content {
-  background-color: var(--color-inner-bg);
+  background-color: var(--color-bg);
   max-width: 1200px;
   margin: 2rem auto;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
 }
