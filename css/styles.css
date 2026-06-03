@@ -1,64 +1,72 @@
 :root {
   /* ==========================================
-     PALETA DE COLORES
+     PALETA DE COLORES (Extraída de image_a096cb.png)
      ========================================== */
-  --color-bg: #fefaf0;            /* Fondo principal (blanco cálido) */
-  --color-surface: #ffffff;       /* Superficie de tarjetas */
-  --color-dark: #542916;          /* Texto principal / Marrón oscuro */
-  --color-dark-soft: #542954;     /* Texto secundario / Terracota */
-  --color-muted: #b79b58;         /* Texto de apoyo / Ocre suave */
-  --color-accent: #f1c166;        /* Dorado fotográfico / Acento principal */
-  --color-accent-light: #88b8cf;  /* Acento claro / Azul pastel */
-  --color-border: #e8e4da;        /* Bordes suaves */
-  --color-dark-bg: #542916;       /* Fondo secciones oscuras */
-  --color-dark-surface: #401e0f;  /* Superficie en oscuro */
+  --color-bg: #f4efe9;             /* Fondo exterior de la página (crema grisáceo) */
+  --color-surface: #ffffff;        /* Fondo blanco de las tarjetas y contenedores */
+  --color-dark: #2b160a;           /* Café oscuro profundo casi negro para títulos */
+  --color-dark-soft: #3d2314;      /* Marrón chocolate de los banners y footer */
+  --color-muted: #70635c;          /* Texto secundario / gris café suave */
+  --color-accent: #e6b96c;         /* Dorado mostaza suave (Botones principales) */
+  --color-accent-light: #8faec4;   /* Azul pastel del banner "Sabor a Verano" */
+  --color-border: #e3ded5;         /* Bordes ultra sutiles */
+  --color-dark-bg: #3d2314;        /* Fondo marrón oscuro de banners/footer */
 
   /* ==========================================
-     BORDES REDONDEADOS (BORDER RADIUS)
+     BORDES REDONDEADOS (Mucho más curvos en la imagen)
      ========================================== */
-  --radius-sm: 4px;    /* Bordes rectos */
-  --radius-md: 8px;    /* Bordes soft */
-  --radius-lg: 16px;   /* Bordes pills */
-  --radius-full: 50%;  /* Bordes full (Círculos perfectos) */
+  --radius-sm: 20px;   /* Botones e inputs con estilo píldora/redondeado */
+  --radius-md: 12px;   /* Tarjetas de productos y categorías */
+  --radius-lg: 24px;   /* Sección Hero / Banners grandes */
+  --radius-full: 50%;  /* Círculos perfectos */
 
   /* ==========================================
-     SOMBRAS (BOX SHADOWS)
+     SOMBRAS (Ultra suaves y difuminadas)
      ========================================== */
-  --shadow-sm: 0 2px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 8px rgba(43, 22, 10, 0.04);
+  --shadow-md: 0 4px 16px rgba(43, 22, 10, 0.06);
+  --shadow-lg: 0 10px 30px rgba(43, 22, 10, 0.08);
 
   /* ==========================================
-     TIPOGRAFÍA Y ESCALA DE FUENTES
+     TIPOGRAFÍA (Elegante y moderna Sans-Serif)
      ========================================== */
-  /* Familias tipográficas (Reemplaza con tus fuentes reales si usas Google Fonts) */
-  --font-display: 'Georgia', serif; 
-  --font-body: 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Inter', 'Segoe UI', system-ui, sans-serif; 
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
 
-  /* Tamaños de fuente basados en la escala de la imagen */
-  --font-size-xs: 0.75rem;    /* 12px - Textos muy pequeños / badges */
-  --font-size-sm: 0.875rem;   /* 14px - Texto secundario / precios antiguos */
-  --font-size-base: 1rem;     /* 16px - Texto del cuerpo / párrafos principales */
-  --font-size-md: 1.125rem;   /* 18px - Subtítulos pequeños / títulos de tarjetas */
-  --font-size-lg: 1.25rem;    /* 20px - Títulos de tarjetas grandes */
-  --font-size-xl: 1.5rem;     /* 24px - Títulos de secciones secundarias */
-  --font-size-2xl: 1.875rem;  /* 30px - Títulos de secciones principales */
-  --font-size-3xl: 2.25rem;   /* 36px - Títulos grandes */
-  --font-size-4xl: 3rem;      /* 48px - Título Hero (Principal) */
+  /* Escala de fuentes */
+  --font-size-xs: 0.75rem;     
+  --font-size-sm: 0.85rem;     
+  --font-size-base: 0.95rem;   
+  --font-size-md: 1.1rem;      
+  --font-size-lg: 1.25rem;     
+  --font-size-xl: 1.4rem;      
+  --font-size-2xl: 1.75rem;    
+  --font-size-3xl: 2.25rem;    
+  --font-size-4xl: 2.85rem;    
 }
 
 body {
-  background-color: var(--color-bg);
+  background-color: #eae3da; /* Fondo más oscuro de la pantalla según la imagen */
   color: var(--color-dark);
   font-family: var(--font-body);
   font-size: var(--font-size-base);
+  margin: 0;
 }
 
-/* Contenedor global para centrar la página */
-.container {
+/* El contenedor principal simula la hoja blanca redondeada de la imagen */
+.main-content {
+  background-color: #faf7f2; /* Color crema blanquecino del contenedor interno */
   max-width: 1200px;
+  margin: 2rem auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 img {
@@ -67,34 +75,50 @@ img {
   height: auto;
 }
 
-/* Estilo para los botones */
+/* ==========================================
+   BOTONES REESTILIZADOS A LA IMAGEN
+   ========================================== */
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--radius-sm);
+  padding: 0.6rem 1.8rem;
+  border-radius: var(--radius-sm); /* Bordes redondeados de píldora */
   border: none;
   font-family: var(--font-body);
-  font-weight: bold;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
+/* Botón Dorado (Estilo "Explorar nuestra sección" de la imagen) */
 .btn--primary {
-  background-color: var(--color-dark-soft);
-  color: #ffffff;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
 }
 
 .btn--primary:hover {
-  background-color: var(--color-dark);
+  background-color: #dcb05f;
+}
+
+.btn--cart {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-size: var(--font-size-xs);
+  width: auto; /* No ocupa todo el ancho, es estilizado */
+  padding: 0.5rem 1.5rem;
+  margin: 0 auto;
+}
+
+.btn--cart:hover {
+  background-color: #dcb05f;
 }
 
 /* ==========================================
    1. DISTRIBUCIÓN DEL ENCABEZADO (HEADER)
    ========================================== */
 .header {
-  background-color: var(--color-surface);
-  box-shadow: var(--shadow-sm);
+  background-color: #faf7f2;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -104,39 +128,43 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .nav__title {
   font-family: var(--font-display);
   font-size: var(--font-size-xl);
+  font-weight: bold;
   color: var(--color-dark);
   margin: 0;
 }
 
-.nav_list, .nav_icon-list {
+.nav__list, .nav__icon-list {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
 
 .nav__link {
   text-decoration: none;
-  color: var(--color-dark);
+  color: var(--color-muted);
   font-weight: 500;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   transition: color 0.3s ease;
 }
 
-.nav_link:hover, .nav_link--active {
-  color: var(--color-dark-soft);
+.nav__link:hover, .nav__link--active {
+  color: var(--color-dark);
+  font-weight: 600;
 }
 
 .nav__icon-link {
   color: var(--color-dark);
   text-decoration: none;
+  font-size: var(--font-size-md);
 }
 
 /* ==========================================
@@ -146,8 +174,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
-  padding: 5rem 1.5rem;
+  gap: 4rem;
+  padding: 4rem 2rem;
 }
 
 .hero__content {
@@ -158,16 +186,17 @@ img {
   font-family: var(--font-display);
   font-size: var(--font-size-4xl);
   color: var(--color-dark);
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
 }
 
 .hero__description {
-  font-size: var(--font-size-md);
-  color: var(--color-dark);
-  opacity: 0.8;
+  font-size: var(--font-size-base);
+  color: var(--color-muted);
   margin-bottom: 2rem;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .hero__image-wrapper {
@@ -176,7 +205,7 @@ img {
 
 .hero__img {
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
   width: 100%;
   object-fit: cover;
 }
@@ -185,58 +214,62 @@ img {
    3. DISTRIBUCIÓN DE CATEGORÍAS (GRID)
    ========================================== */
 .categories {
-  padding: 4rem 1.5rem;
+  padding: 3rem 2rem;
 }
 
 .section-title {
   font-family: var(--font-display);
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
   color: var(--color-dark);
-  text-align: center;
-  margin-bottom: 3rem;
+  text-align: left; /* En la imagen los títulos están alineados a la izquierda */
+  margin-bottom: 2rem;
 }
 
 .categories__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
 }
 
 .category-card {
   background-color: var(--color-surface);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .category-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .category-card__link {
   display: block;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   text-decoration: none;
   color: var(--color-dark);
 }
 
 .category-card__icon {
   display: block;
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .category-card__name {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
   margin: 0;
 }
 
-/* Banners Promocionales */
+/* Banners Promocionales (Suscripción y Colección) */
 .banners-promo {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .banner-card {
@@ -244,86 +277,83 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-}
-
-.banner-card--light {
-  background-color: #f5ece1; /* Tono arena suave */
-  color: var(--color-dark);
-}
-
-.banner-card--dark {
-  background-color: var(--color-dark-bg);
+  background-color: var(--color-dark-bg); /* Ambos son oscuros en la imagen */
   color: #ffffff;
 }
 
+.banner-card--light {
+  background-color: var(--color-dark-bg); /* Sincronizado con la imagen */
+}
+
 .banner-card__info {
-  max-width: 60%;
+  max-width: 65%;
 }
 
 .banner-card__badge {
   display: inline-block;
   font-size: var(--font-size-xs);
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-  color: var(--color-muted);
-}
-
-.banner-card__badge--accent {
+  font-weight: 500;
   color: var(--color-accent);
+  margin-bottom: 0.25rem;
 }
 
 .banner-card__text {
   font-family: var(--font-display);
-  font-size: var(--font-size-lg);
-  margin: 0 0 1.5rem 0;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  margin: 0 0 1rem 0;
 }
 
 .banner-card__img {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  border-radius: var(--radius-full);
+  width: 90px;
+  height: 90px;
+  object-fit: contain; /* Ajuste para iconos de tazas o ilustraciones */
 }
 
 /* ==========================================
    4. DISTRIBUCIÓN DE PRODUCTOS (GRID)
    ========================================== */
 .products {
-  padding: 4rem 1.5rem;
+  padding: 3rem 2rem;
 }
 
 .products__header {
-  text-align: center;
-  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.products__header .section-title {
+  margin-bottom: 0;
 }
 
 .products__subtitle {
-  color: var(--color-muted);
-  font-size: var(--font-size-base);
-  margin-top: 0.5rem;
+  display: none; /* Quitamos subtítulo innecesario para pegar el diseño */
 }
 
 .products__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
 }
 
 .product-card {
   background-color: var(--color-surface);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding: 0.75rem; /* Margen interno blanco tipo marco en la imagen */
 }
 
 .product-card__image-container {
-  height: 220px;
+  height: 180px;
+  border-radius: calc(var(--radius-md) - 4px);
   overflow: hidden;
 }
 
@@ -334,44 +364,39 @@ img {
 }
 
 .product-card__content {
-  padding: 1.5rem;
+  padding: 1rem 0.25rem 0.5rem 0.25rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  text-align: center; /* Centrado como en image_a096cb.png */
 }
 
 .product-card__tag {
-  font-size: var(--font-size-xs);
+  font-size: 10px;
   color: var(--color-muted);
   text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .product-card__title {
   font-family: var(--font-display);
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
   color: var(--color-dark);
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
 }
 
 .product-card__price {
-  font-size: var(--font-size-md);
-  font-weight: bold;
-  color: var(--color-dark-soft);
-  margin-bottom: 1.5rem;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
   margin-top: auto;
 }
 
-.btn--cart {
-  background-color: var(--color-dark);
-  color: #ffffff;
-  font-size: var(--font-size-sm);
-  width: 100%;
-}
-
 /* ==========================================
-   5. DISEÑO ADAPTABLE (MÓVILES)
+   5. DISEÑO ADAPTABLE (MÓVILES) - ¡NO MODIFICADO!
    ========================================== */
 @media (max-width: 768px) {
   .nav {
