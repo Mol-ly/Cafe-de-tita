@@ -153,19 +153,22 @@ img {
 }
 
 .nav__icon-link {
+  text-decoration: none;
+  font-size: var(--font-size-lg);
+  color: #000000;
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
 }
 
-/* Iconos cargados dinámicamente desde tus URLs */
-.nav__icon-item:nth-child(1) .nav__icon-link {
-  background-image: url('https://www.flaticon.es/icono-gratis/usuario_3856336');
+/* Icono de Usuario */
+.nav__icon-item:nth-child(1) .nav__icon-link::before {
+  content: "\f007"; /* Código interno para el usuario */
 }
-.nav__icon-item:nth-child(2) .nav__icon-link {
-  background-image: url('https://www.flaticon.es/icono-gratis/carrito-de-compras_1170678');
+
+/* Icono de Carrito */
+.nav__icon-item:nth-child(2) .nav__icon-link::before {
+  content: "\f07a"; /* Código interno para el carrito */
 }
 
 /* ==========================================
@@ -249,12 +252,15 @@ img {
 }
 
 .category-card__icon {
-  width: 32px;
-  height: 32px;
-  background-image: url('https://www.flaticon.es/icono-gratis/granos-de-cafe_10407659');
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: brightness(0) invert(1); /* Pone los granos de café blancos como la maqueta */
+  font-size: 2rem;
+  display: inline-block;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #ffffff; /* Los vuelve blancos como en tu imagen */
+}
+
+.category-card__icon::before {
+  content: "\f7c6"; /* Código de los granos de café */
 }
 
 .banners-promo {
@@ -416,17 +422,22 @@ img {
 }
 
 .feature-item__icon {
-  width: 40px;
-  height: 40px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: var(--color-dark-bg);
 }
 
-/* Asignación de iconos dinámicos según el Layout */
-.feature-item:nth-child(1) .feature-item__icon { background-image: url('https://www.flaticon.es/icono-gratis/granos-de-cafe_10407659'); }
-.feature-item:nth-child(2) .feature-item__icon { background-image: url('https://www.flaticon.es/icono-gratis/tarjeta-de-credito_271035'); }
-.feature-item:nth-child(3) .feature-item__icon { background-image: url('https://www.flaticon.es/icono-gratis/hoja_8832663'); }
-.feature-item:nth-child(4) .feature-item__icon { background-image: url('https://www.flaticon.es/icono-gratis/entrega_7610711'); }
+/* 1. Envío de café en grano */
+.feature-item:nth-child(1) .feature-item__icon::before { content: "\f7c6"; } 
+/* 2. Pagos seguros (Tarjeta de crédito) */
+.feature-item:nth-child(2) .feature-item__icon::before { content: "\f09d"; } 
+/* 3. Café orgánico (Hoja) */
+.feature-item:nth-child(3) .feature-item__icon::before { content: "\f06c"; } 
+/* 4. Entrega en 24h (Camión de envío) */
+.feature-item:nth-child(4) .feature-item__icon::before { content: "\f0d1"; }
 
 .feature-item__text {
   font-size: var(--font-size-xs);
