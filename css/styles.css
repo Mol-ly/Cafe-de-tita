@@ -2,16 +2,14 @@
   /* ==========================================
      PALETA DE COLORES (Extraída de image_968f80.png)
      ========================================== */
-  --color-bg: #fefaf0;            /* Fondo principal (blanco cálido) */
+  --color-bg: #fefaf0;            /* Fondo principal: blanco cálido */
   --color-surface: #ffffff;       /* Superficie de tarjetas */
-  --color-dark: #542916;          /* Texto principal / Marrón oscuro */
-  --color-dark-soft: #542954;     /* Texto secundario / Terracota */
-  --color-muted: #b79b58;         /* Texto de apoyo / Ocre suave */
-  --color-accent: #f1c166;        /* Dorado fotográfico / Acento principal */
-  --color-accent-light: #88b8cf;  /* Acento claro / Azul pastel */
+  --color-dark: #542916;          /* Texto principal (Marrón chocolate) */
+  --color-dark-soft: #a13a1e;     /* Texto secundario (Rojo terracota) */
+  --color-muted: #b79b58;         /* Texto de apoyo (Marrón dorado) */
+  --color-accent: #f1c166;        /* Acento principal / Botones (Mostaza) */
+  --color-accent-light: #88b8cf;  /* Acento claro / Detalles (Azul grisáceo) */
   --color-border: #e8e4da;        /* Bordes suaves */
-  --color-dark-bg: #542916;       /* Fondo secciones oscuras */
-  --color-dark-surface: #401e0f;  /* Superficie en oscuro */
 
   /* ==========================================
      BORDES REDONDEADOS (Estilo píldora e hiper-curvos)
