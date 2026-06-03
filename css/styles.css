@@ -46,7 +46,7 @@
 }
 
 body {
-  background-color: var(--color-bg);
+  background-color: var(--color-inner-bg);
   color: var(--color-dark);
   font-family: var(--font-body);
   font-size: var(--font-size-base);
