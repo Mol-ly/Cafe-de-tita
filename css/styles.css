@@ -2,16 +2,16 @@
   /* ==========================================
      PALETA DE COLORES (Extraída de image_968f80.png)
      ========================================== */
-  --color-bg: #eae3da;             /* Fondo grisáceo exterior de la página */
-  --color-inner-bg: #faf7f2;       /* Fondo crema blanquecino de la "hoja" central */
-  --color-surface: #ffffff;        /* Fondo blanco puro de las tarjetas */
-  --color-dark: #2b160a;           /* Café oscuro profundo para textos principales */
-  --color-dark-bg: #3d2314;        /* Marrón chocolate de banners y footer */
-  --color-muted: #70635c;          /* Gris café suave para textos secundarios y enlaces */
-  --color-accent: #e6b96c;         /* Dorado mostaza claro (Botones principales) */
-  --color-accent-light: #8faec4;   /* Azul pastel del bloque "Sabor a Verano" */
-  --color-border: #e3ded5;         /* Bordes suaves */
-  --color-danger: #be2e2e;         /* Rojo de los badges de descuento pequeños */
+  --color-bg: #fefaf0;            /* Fondo principal (blanco cálido) */
+  --color-surface: #ffffff;       /* Superficie de tarjetas */
+  --color-dark: #542916;          /* Texto principal / Marrón oscuro */
+  --color-dark-soft: #542954;     /* Texto secundario / Terracota */
+  --color-muted: #b79b58;         /* Texto de apoyo / Ocre suave */
+  --color-accent: #f1c166;        /* Dorado fotográfico / Acento principal */
+  --color-accent-light: #88b8cf;  /* Acento claro / Azul pastel */
+  --color-border: #e8e4da;        /* Bordes suaves */
+  --color-dark-bg: #542916;       /* Fondo secciones oscuras */
+  --color-dark-surface: #401e0f;  /* Superficie en oscuro */
 
   /* ==========================================
      BORDES REDONDEADOS (Estilo píldora e hiper-curvos)
@@ -57,7 +57,7 @@ body {
 .main-content {
   background-color: var(--color-bg);
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
