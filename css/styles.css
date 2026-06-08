@@ -711,18 +711,27 @@ img {
 @media (max-width: 768px) {
   .nav { 
     flex-direction: column; 
-    gap: 1.2rem; 
-    padding: 1.5rem 1.2rem; /* Agrega colchón de aire a los links del menú */
+    gap: 1.8rem;          /* ← MÁS ESPACIO: Separa el título, los enlaces y los íconos entre sí */
+    padding: 2rem 1.5rem; /* ← MÁS ESPACIO: Relleno generoso arriba, abajo y a los lados */
     width: 100%;
     box-sizing: border-box;
   }
+
   .nav__list { 
-    gap: 1.5rem; 
+    gap: 2rem;            /* ← MÁS ESPACIO: Separa los enlaces (Inicio, Tienda...) para que no se encimen */
+    flex-wrap: wrap;      /* Permite que bajen limpiamente si la pantalla es muy angosta */
+    justify-content: center;
   }
+
+  .nav__icon-list {
+    gap: 2rem;            /* ← MÁS ESPACIO: Separa el ícono de usuario y la bolsa de compras */
+    margin-top: 0.5rem;   /* Empuja un poco los íconos hacia abajo para que no se peguen a los links */
+  }
+}
   .hero { 
     flex-direction: column-reverse; 
     text-align: center; 
-    padding: 1.5rem 0 3rem 0; 
+    padding-top: 2rem; /* ← Agrega este espacio para separar el inicio de la página del menú pegajoso */
   }
   .hero__image-wrapper {
     width: 100%;
