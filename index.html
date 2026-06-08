@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café de Tita - ¡Qué buen sabor!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__logo">
+        <h1 class="nav__title">café de tita</h1>
+      </div>  
+      
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link nav__link--active">INICIO</a></li>
+          <li class="nav__item"><a href="#categorias" class="nav__link">NUESTRA TIENDA</a></li>
+<!--           <li class="nav__item"><a href="#menu" class="nav__link">MENÚ</a></li> -->
+          <li class="nav__item"><a href="#productos" class="nav__link">MENÚ & PRODUCTOS</a></li>
+          <li class="nav__item"><a href="#contacto" class="nav__link">CONTACTO</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__actions">
+        <ul class="nav__icon-list">
+          <li class="nav__icon-item">
+            <a href="#contacto" class="nav__icon-link" aria-label="Perfil de Usuario"><i class="fa-regular fa-user"></i></a>
+          </li>
+          <li class="nav__icon-item">
+            <a href="#productos" class="nav__icon-link" aria-label="Carrito de compras"><i class="fa-solid fa-bag-shopping"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero__content">
+        <h2 class="hero__title">HAZ DE TU MOMENTO<br>UNA EXPERIENCIA INOLVIDABLE</h2>
+        <p class="hero__description">Descubre café de especialidad con notas artesanales, seleccionado en origen y tostado a la perfección para acompañar tus rituales diarios.</p>
+        <button onclick="location.href='#productos'" class="btn btn--hero">¡Explora Más!</button>
+      </div>
+      
+      <div class="hero__image-wrapper">
+        <img src="img\imagen-hero.jpg" alt="Taza de café frontal en un tapiz" class="hero__img">
+      </div>
+    </section>
+    
+    <!-- CATEGORÍAS -->
+    <section id="categorias" class="categories container">
+      <div class="categories__header">
+        <h2 class="section-title">CATEGORÍAS DESTACADAS</h2>
+      </div>
+      
+      <div class="categories__grid">
+        <div class="category-card">
+          <i class="fa-solid fa-mug-hot category-card__icon"></i>
+          <span class="category-card__name">Espresso</span>
+        </div>
+        <div class="category-card">
+          <i class="fa-solid fa-snowflake category-card__icon"></i>
+          <span class="category-card__name">Cold Brew</span>
+        </div>
+        <div class="category-card">
+          <i class="fa-solid fa-blender category-card__icon"></i>
+          <span class="category-card__name">Filtrados</span>
+        </div>
+        <div class="category-card">
+          <i class="fa-solid fa-seedling category-card__icon"></i>
+          <span class="category-card__name">En Grano</span>
+        </div>
+        <div class="category-card">
+          <i class="fa-solid fa-cookie category-card__icon"></i>
+          <span class="category-card__name">Repostería</span>
+        </div>
+      </div>
+
+      <!-- BANNERS PROMOCIONALES -->
+      <aside class="banners-promo">
+        <div class="banner-card banner-card--light">
+          <div class="banner-card__info">
+            <h3 class="banner-card__title">SUSCRIPCIÓN MENSUAL</h3>
+            <p class="banner-card__subtext">Desde $3.00 / entrega</p>
+            <button class="btn btn--banner-dark">¡Compra Ya!</button>
+          </div>
+          <div class="banner-card__icon-bg"><i class="fa-solid fa-rotate"></i></div>
+        </div>
+        
+        <div class="banner-card banner-card--dark">
+          <div class="banner-card__info">
+            <h3 class="banner-card__title">COLECCIÓN ESPECIAL DEL BARISTA</h3>
+            <p class="banner-card__subtext">$40.99 total</p>
+            <button class="btn btn--banner-light">¡Compra Ya!</button>
+          </div>
+          <div class="banner-card__icon-bg"><i class="fa-solid fa-star"></i></div>
+        </div>
+      </aside>
+    </section>
+    
+    <!-- PRODUCTOS DESTACADOS -->
+    <section id="productos" class="products container">
+      <div class="products__header">
+        <h2 class="section-title">PRODUCTOS DESTACADOS</h2>
+      </div>
+
+      <div class="products__grid">
+        <!-- P1 -->
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img\taza-cafe-espresso-artesanal.jpg" alt="Espresso Artesanal" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">ESPRESSO ARTESANAL</h3>
+            <div class="product-card__meta">
+              <span class="product-card__desc">Nota: Chocolate Amargo</span>
+              <span class="product-card__price">$3.50</span>
+            </div>
+            <button class="btn btn--product">Comprar</button>
+          </div>
+        </article>
+        <!-- P2 -->
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img\latte-cremoso.jpg" alt="Latte Cremoso" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">LATTE CREMOSO</h3>
+            <div class="product-card__meta">
+              <span class="product-card__desc">Nota: Caramelo suave</span>
+              <span class="product-card__price">$4.20</span>
+            </div>
+            <button class="btn btn--product">Comprar</button>
+          </div>
+        </article>
+        <!-- P3 -->
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img\granos-cafe-tostados.webp" alt="Grano Copeteñito" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">GRANO COPETEÑITO</h3>
+            <div class="product-card__meta">
+              <span class="product-card__desc">Origen: El Salvador</span>
+              <span class="product-card__price">$18.00</span>
+            </div>
+            <button class="btn btn--product">Comprar</button>
+          </div>
+        </article>
+        <!-- P4 -->
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img\taza-chemex-filtrado.jpg" alt="Chemex Filtrado" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">CHEMEX FILTRADO</h3>
+            <div class="product-card__meta">
+              <span class="product-card__desc">Nota: Flores y Cítricos</span>
+              <span class="product-card__price">$4.80</span>
+            </div>
+            <button class="btn btn--product">Comprar</button>
+          </div>
+        </article>
+        <!-- P5 -->
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img\grano-coopeteñito-venta.jpg" alt="V60 Tradicional" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">V60 TRADICIONAL</h3>
+            <div class="product-card__meta">
+              <span class="product-card__desc">Nota: Frutos Rojos</span>
+              <span class="product-card__price">$4.50</span>
+            </div>
+            <button class="btn btn--product">Comprar</button>
+          </div>
+        </article>
+        <!-- P6 -->
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img\taza-cafe-americano.jpg" alt="Café Americano" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">CAFÉ AMERICANO</h3>
+            <div class="product-card__meta">
+              <span class="product-card__desc">Nota: Cuerpo balanceado</span>
+              <span class="product-card__price">$3.00</span>
+            </div>
+            <button class="btn btn--product">Comprar</button>
+          </div>
+        </article>
+        <!-- P7 -->
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img\macchiato-cortado-tostado.jpg" alt="Macchiato Cortado" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">MACCHIATO CORTADO</h3>
+            <div class="product-card__meta">
+              <span class="product-card__desc">Nota: Avellana tostada</span>
+              <span class="product-card__price">$3.80</span>
+            </div>
+            <button class="btn btn--product">Comprar</button>
+          </div>
+        </article>
+        <!-- P8 -->
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img\cafe-taza-prensa-francesa.jpg" alt="Prensa Francesa" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">PRENSA FRANCESA</h3>
+            <div class="product-card__meta">
+              <span class="product-card__desc">Nota: Cuerpo robusto</span>
+              <span class="product-card__price">$5.00</span>
+            </div>
+            <button class="btn btn--product">Comprar</button>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    <!-- SECCIÓN BLOQUE DE VERANO -->
+    <section class="summer-flavor container">
+      <div class="banner-card banner-card--summer">
+        <div class="banner-card__info">
+          <h2 class="banner-card__title">UN VERANO CON UN MEJOR SABOR</h2>
+          <p class="banner-card__text">Disfruta tu temporada con la frescura e intensidad que mereces. Pídelo frío o caliente, aderezado con leche de almendras o un toque extra de vainilla natural de Madagascar.</p>
+          <button class="btn btn--summer">Ver Catálogo De Verano</button>
+        </div>
+        <div class="banner-card__img-wrapper">
+          <img src="img\coffe-seccion-verano.jpg" alt="Terraza de verano" class="banner-card__img">
+        </div>
+      </div>
+
+      <div class="categories__header">
+        <h2 class="section-title">MÁS POPULARES</h2>
+      </div>
+
+      <div class="products__grid">
+        <!-- MP1 -->
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img\taza-iced-latte-vainilla.webp" alt="Iced Latte Vainilla" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">ICED LATTE VAINILLA</h3>
+            <div class="product-card__meta">
+              <span class="product-card__desc">Refrescante & Dulce</span>
+              <span class="product-card__price">$4.50</span>
+            </div>
+            <button class="btn btn--product">Comprar</button>
+          </div>
+        </article>
+        <!-- MP2 -->
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img\taza-affogato-clasico.jpg" alt="Affogato Clásico" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">AFFOGATO CLÁSICO</h3>
+            <div class="product-card__meta">
+              <span class="product-card__desc">Espresso con Gelato</span>
+              <span class="product-card__price">$5.20</span>
+            </div>
+            <button class="btn btn--product">Comprar</button>
+          </div>
+        </article>
+        <!-- MP3 -->
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img\coffe-capuchino-helado.jpg" alt="Capuccino Helado" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">CAPUCCINO HELADO</h3>
+            <div class="product-card__meta">
+              <span class="product-card__desc">Espumoso e Intenso</span>
+              <span class="product-card__price">$4.50</span>
+            </div>
+            <button class="btn btn--product">Comprar</button>
+          </div>
+        </article>
+        <!-- MP4 -->
+        <article class="product-card">
+          <div class="product-card__image-container">
+            <img src="img\taza-espresso-tonic.jpg" alt="Espresso Tonic" class="product-card__img">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">ESPRESSO TONIC</h3>
+            <div class="product-card__meta">
+              <span class="product-card__desc">Con un toque cítrico</span>
+              <span class="product-card__price">$4.80</span>
+            </div>
+            <button class="btn btn--product">Comprar</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS & NEWSLETTER FORM -->
+    <section id="contacto" class="newsletter-location container">
+      <div class="features-bar">
+        <div class="feature-item">
+          <i class="fa-solid fa-leaf feature-item__icon"></i>
+          <p class="feature-item__text">ENVÍO DE CAFÉ EN GRANO</p>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-shield-halved feature-item__icon"></i>
+          <p class="feature-item__text">PAGOS SEGUROS</p>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-award feature-item__icon"></i>
+          <p class="feature-item__text">ORGANICO CERTIFICADO</p>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-truck feature-item__icon"></i>
+          <p class="feature-item__text">ENTREGA EN 24 HORAS</p>
+        </div>
+      </div>
+
+      <!-- FORMULARIO FLEXBOX ACTUALIZADO CON LOS 4 CAMPOS + LAYOUT LATERAL -->
+      <div class="newsletter-banner">
+        <div class="newsletter-banner__left">
+          <h3 class="newsletter__title">RECIBE OFERTAS EXCLUSIVAS</h3>
+          <p class="newsletter__description">Mantente al día con nuestras catas presenciales, promociones y especialidades del mes.</p>
+        </div>
+        
+        <div class="newsletter-banner__right">
+          <form class="newsletter__form-flex">
+            <div class="form-row">
+              <input type="text" placeholder="Nombre" class="newsletter__input-field" required>
+              <input type="text" placeholder="Apellido" class="newsletter__input-field" required>
+            </div>
+            <div class="form-row">
+              <input type="tel" placeholder="Contacto" class="newsletter__input-field" required>
+              <input type="email" placeholder="Email" class="newsletter__input-field" required>
+            </div>
+            <button type="submit" class="btn btn--form-submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__links-group">
+        <h4 class="footer__links-title">Información</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Sobre Nosotros</a></li>
+          <li><a href="#" class="footer__link">Nuestros Agricultores</a></li>
+          <li><a href="#" class="footer__link">Responsabilidad Social</a></li>
+          <li><a href="#" class="footer__link">Testimonios</a></li>
+          <li><a href="#" class="footer__link">Contacto directo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links-group">
+        <h4 class="footer__links-title">Enlaces de Ayuda</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Soporte técnico</a></li>
+          <li><a href="#" class="footer__link">Términos & Condiciones</a></li>
+          <li><a href="#" class="footer__link">Políticas de Privacidad</a></li>
+          <li><a href="#" class="footer__link">Políticas de Envíos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links-group">
+        <h4 class="footer__links-title">Servicios</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Tarjeta de Fidelidad</a></li>
+          <li><a href="#" class="footer__link">Suscripciones corporativas</a></li>
+          <li><a href="#" class="footer__link">Devolución de Granos</a></li>
+          <li><a href="#" class="footer__link">Catering de Bodas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links-group">
+        <h4 class="footer__links-title">Contacto</h4>
+        <ul class="footer__list footer__list--contact">
+          <li><i class="fa-solid fa-phone"></i> +503 8623 8494</li>
+          <li><i class="fa-solid fa-envelope"></i> cafedetita@emailid.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> San Salvador, El Salvador</li>
+        </ul>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="footer__social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="footer__social-link" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
