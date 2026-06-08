@@ -1,0 +1,768 @@
+:root {
+  /* ==========================================
+     PALETA DE COLORES REVISADA (Según tus indicaciones)
+     ========================================== */
+  --color-bg: #ffffff;             /* Fondo exterior blanco */
+  --color-inner-bg: #ffffff;       /* Fondo limpio para secciones */
+  --color-surface: #e8e4da;        /* Color crema claro de las tarjetas de productos */
+  --color-dark: #2b160a;           /* Texto oscuro */
+  --color-dark-bg: #8b6b53;        /* Color marrón de las tarjetas de inicio/banners */
+  --color-footer-bg: #4b1d0e;      /* Café oscuro profundo del footer */
+  --color-muted: #70635c;          
+  --color-accent: #e6b96c;         
+
+  /* ==========================================
+     BORDES REDONDEADOS (Fieles al Layout)
+     ========================================== */
+  --radius-sm: 25px;   /* Botones redondeados / Píldora */
+  --radius-md: 18px;   /* Esquinas de las tarjetas de productos */
+  --radius-lg: 24px;   /* Bloques grandes como el de Verano */
+  --radius-full: 50%;  
+
+  /* ==========================================
+     TIPOGRAFÍA Y FUENTES
+     ========================================== */
+/* ==========================================
+     TIPOGRAFÍA Y FUENTES CORREGIDAS
+     ========================================== */
+--font-display: 'Playfair Display', serif;          /* Para títulos, encabezados y elementos destacados */
+  --font-body: 'Montserrat', system-ui, sans-serif;           /* Para textos, botones y descripciones */
+
+  --font-size-xs: 0.75rem;     
+  --font-size-sm: 0.90rem;     
+  --font-size-base: 1rem;   
+  --font-size-md: 1.2rem;      
+  --font-size-lg: 1.5rem;      
+  --font-size-xl: 1.8rem;      
+  --font-size-4xl: 2.5rem;    
+}
+
+/* ==========================================
+   ESTILOS BASE
+   ========================================== */
+body {
+  background-color: #faf8f5; /* Tono hueso muy sutil del fondo general en la imagen */
+  color: var(--color-dark);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* ==========================================
+   COMPONENTES DE BOTONES (Fieles a la imagen)
+   ========================================== */
+.btn {
+  display: inline-block;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn--hero {
+  background-color: var(--color-dark-bg);
+  color: #ffffff;
+  padding: 0.75rem 2.2rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.btn--hero:hover {
+  background-color: #ffffff;
+  color: var(--color-dark-bg);
+  border: 1px solid var(--color-dark-bg);
+}
+
+.btn--banner-dark {
+  background-color: var(--color-dark);
+  color: #ffffff;
+  padding: 0.6rem 2rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.btn--banner-dark:hover {
+  background-color: #ffffff;
+  color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+
+.btn--banner-light {
+  background-color: #ffffff;
+  color: var(--color-dark);
+  padding: 0.6rem 2rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.btn--banner-light:hover {
+  background-color: var(--color-dark);
+  color: #ffffff;
+  border-color: var(--color-dark);
+}
+
+.btn--product {
+  background-color: #ffffff;
+  color: var(--color-dark);
+  border: 1px solid #e3ded5;
+  width: 100%;
+  padding: 0.6rem 0;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.btn--product:hover {
+  background-color: var(--color-dark);
+  color: #ffffff;
+  border-color: var(--color-dark);
+}
+
+.btn--summer {
+  background-color: #ffffff;
+  color: var(--color-dark);
+  border: 1px solid #e3ded5;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.btn--summer:hover {
+  background-color: var(--color-dark);
+  color: #ffffff;
+  border-color: var(--color-dark);
+}
+
+.btn--form-submit {
+  background-color: var(--color-dark);
+  color: #ffffff;
+  padding: 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  width: 100%;
+}
+
+/* ==========================================
+   1. HEADER & NAVEGACIÓN
+   ========================================== */
+.header {
+  background-color: #ffffff; /* Cambia a color sólido para que no se trasluzca el contenido al bajar */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra para resaltar sobre el fondo blanco */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.nav__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  color: var(--color-dark);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--color-muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.nav__link--active, .nav__link:hover {
+  color: var(--color-dark);
+}
+
+.nav__icon-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__icon-link {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-size: 1.2rem;
+}
+
+/* ==========================================
+   2. HERO (BIENVENIDA)
+   ========================================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 3rem 0 5rem 0;
+}
+
+.hero__content {
+  flex: 1;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  color: var(--color-dark);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.hero__description {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 460px;
+}
+
+.hero__image-wrapper {
+  flex: 1.2;
+}
+
+.hero__img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.hero__img:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+/* ==========================================
+   3. CATEGORÍAS & BANNERS DE INICIO
+   ========================================== */
+.categories {
+  padding: 2.5rem 0;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.category-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.category-card__icon {
+  font-size: 1.35rem;
+  color: var(--color-dark-bg);
+}
+
+.category-card__name {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+/* Banners Promocionales (Mensual y Barista) */
+.banners-promo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.banner-card {
+  padding: 2.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.banner-card:hover {
+  transform: translateY(-10px);
+  transition: transform 0.2s ease-in-out;
+}
+
+.banner-card--light {
+  background-color: #f6f3eb;
+  color: var(--color-dark);
+}
+
+.banner-card--dark {
+  background-color: var(--color-dark-bg);
+  color: #ffffff;
+}
+
+.banner-card__title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.5px;
+}
+
+.banner-card__subtext {
+  font-size: var(--font-size-xs);
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.banner-card__icon-bg {
+  font-size: 3.5rem;
+  opacity: 0.12;
+}
+
+/* ==========================================
+   4. PRODUCTOS DESTACADOS
+   ========================================== */
+.products {
+  padding: 3.5rem 0;
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.015);
+}
+
+.product-card__image-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.product-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__title {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0 0 0.4rem 0;
+  letter-spacing: 0.3px;
+}
+
+.product-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-muted);
+  margin-bottom: 1.2rem;
+}
+
+.product-card__price {
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+/* ==========================================
+   5. SECCIÓN BLOQUE DE VERANO
+   ========================================== */
+.summer-flavor {
+  padding: 2rem 0;
+}
+
+.banner-card--summer {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+}
+
+.banner-card--summer .banner-card__info {
+  padding: 4.5rem 3.5rem;
+}
+
+.banner-card--summer .banner-card__title {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.banner-card--summer .banner-card__text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+}
+
+.banner-card__img-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-card__img-wrapper .banner-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 1. Estado base */
+.banner-card__img {
+  filter: blur(0.5px) grayscale(10%); /* Sutil desenfoque de fondo */
+  transition: transform 0.6s ease, filter 0.4s ease;
+}
+
+/* 2. Estado Hover */
+.banner-card__img-wrapper:hover .banner-card__img {
+  transform: scale(1.04);
+  filter: blur(0) grayscale(0%); /* Se aclara por completo resaltando los detalles */
+}
+
+
+/* ==========================================
+   6. CARACTERÍSTICAS & REGISTRO (FLEXBOX FORM)
+   ========================================== */
+.features-bar {
+  background-color: #eeeae1; /* Color beige/grisáceo exacto de la barra inferior */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem 1rem;
+  border-radius: var(--radius-md);
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  text-align: center;
+}
+
+.feature-item__icon {
+  font-size: 1.25rem;
+  color: #635347;
+}
+
+.feature-item__text {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #635347;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* Formulario Lado a Lado (Flexbox Avanzado) */
+.newsletter-banner {
+  background-color: #f1ede4; /* Fondo crema suave con formas vectoriales sutiles */
+  background-image: radial-gradient(circle at 10% 20%, rgba(0,0,0,0.01) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 80%, rgba(0,0,0,0.01) 0%, transparent 40%);
+  padding: 4.5rem 3.5rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.newsletter-banner__left {
+  flex: 1;
+}
+
+.newsletter-banner__left .newsletter__title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 0.5px;
+}
+
+.newsletter-banner__left .newsletter__description {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.newsletter-banner__right {
+  flex: 1.2;
+  width: 100%;
+}
+
+.newsletter__form-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.85rem;
+}
+
+.newsletter__input-field {
+  flex: 1;
+  background-color: #ffffff;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  outline: none;
+  color: var(--color-dark);
+}
+
+.newsletter__input-field::placeholder {
+  color: #a39b94;
+}
+
+/* ==========================================
+   7. FOOTER OSCURO
+   ========================================== */
+.footer {
+  background-color: var(--color-footer-bg);
+  color: #ffffff;
+  padding: 4.5rem 0 3.5rem 0;
+  margin-top: 5rem;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.footer__links-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.footer__link:hover {
+  opacity: 1;
+}
+
+.footer__list--contact {
+  gap: 1rem;
+}
+
+.footer__list--contact li {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer__list--contact i {
+  width: 14px;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.footer__social-link {
+  color: #ffffff;
+  font-size: 1.15rem;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.footer__social-link:hover {
+  opacity: 1;
+}
+
+/* ==========================================
+   8. MEDIA QUERIES (ADAPTACIÓN DISPOSITIVOS)
+   ========================================== */
+
+/* --- TABLETS Y PANTALLAS INTERMEDIAS (Hasta 1024px) --- */
+@media (max-width: 1024px) {
+  .products__grid { 
+    grid-template-columns: repeat(3, 1fr); /* Baja de 4 a 3 columnas */
+  }
+  .hero { 
+    gap: 2rem; 
+  }
+  .hero__title { 
+    font-size: 2.2rem; /* Reduce el tamaño del título principal */
+  }
+}
+
+/* --- DISPOSITIVOS MEDIANOS (Hasta 900px) --- */
+@media (max-width: 900px) {
+  .newsletter-banner {
+    flex-direction: column; /* El formulario se apila debajo del texto */
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .newsletter-banner__left {
+    text-align: center;
+  }
+  .categories__grid { 
+    grid-template-columns: repeat(3, 1fr); /* Se adapta el menú de iconos */
+  }
+  .footer__container { 
+    grid-template-columns: repeat(2, 1fr); /* El footer se divide en dos filas de dos */
+  }
+  .banner-card--summer { 
+    grid-template-columns: 1fr; /* La sección de verano se vuelve vertical */
+  }
+  .banner-card--summer .banner-card__info { 
+    padding: 3rem 2rem; 
+  }
+}
+
+/* --- TELÉFONOS MÓVILES (Hasta 768px) --- */
+@media (max-width: 768px) {
+  .nav { 
+    flex-direction: column; /* Logo, enlaces e iconos se apilan centrados */
+    gap: 1.2rem; 
+    padding: 1.5rem 0;
+  }
+  .nav__list { 
+    gap: 1.5rem; 
+  }
+  .hero { 
+    flex-direction: column-reverse; /* Primero la foto, luego el texto para mejor lectura */
+    text-align: center; 
+    padding: 1.5rem 0 3rem 0; 
+  }
+  .hero__description { 
+    margin: 0 auto 2rem auto; 
+  }
+  .banners-promo { 
+    grid-template-columns: 1fr; /* Banners promocionales ocupan el 100% */
+  }
+  .products__grid { 
+    grid-template-columns: repeat(2, 1fr); /* Cuadrícula de productos de 2 en 2 */
+  }
+  .features-bar { 
+    grid-template-columns: repeat(2, 1fr); /* Iconos de características de 2 en 2 */
+    gap: 1.5rem; 
+  }
+  .form-row { 
+    flex-direction: column; /* Los campos del formulario (Nombre, Apellido, etc.) bajan uno a uno */
+    gap: 0.85rem; 
+  }
+}
+
+/* --- PANTALLAS PEQUEÑAS (Hasta 480px) --- */
+@media (max-width: 480px) {
+  .categories__grid { 
+    grid-template-columns: repeat(2, 1fr); /* Categorías más compactas */
+  }
+  .products__grid { 
+    grid-template-columns: 1fr; /* Un producto por fila para apreciarse en pantallas mini */
+  }
+  .features-bar { 
+    grid-template-columns: 1fr; /* Características en lista vertical */
+  }
+  .footer__container { 
+    grid-template-columns: 1fr; /* Secciones del footer una debajo de otra */
+    text-align: center;
+  }
+  .footer__socials {
+    justify-content: center; /* Centra tus iconos de redes sociales */
+  }
+  .footer__list--contact li {
+    justify-content: center;
+  }
+}
